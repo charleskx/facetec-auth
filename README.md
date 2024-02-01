@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Authentication system with FaceTec and ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an authentication system that uses FaceTec's facial recognition service integrated with Vite, ReactJS and TypeScript. It allows users to be registered in the FaceTec database and authenticated using facial recognition.
 
-Currently, two official plugins are available:
+## Project configuration
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Create a developer account on FaceTec:
+    - Go to [https://dev.facetec.com/](https://dev.facetec.com) and create a FaceTec developer account.
+    - After creating a developer account, download the FaceTec Browser SDK from the Download SDKs section.
+2. Configure the Environment Variables:
+    - In the `core-sdk` directory of the FaceTec SDK you downloaded, open the `Config.js` file and copy the contents of the `PublicFaceScanEncryptionKey` variable. Paste this content into the `faceTec.ts` file located in the `src/configs/faceTec.ts` folder.
+    - Also, create an `.env` file in the root of the project and fill it with the information from the `Config.js` file.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Install the Dependencies and Start the Development Server
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+  npm install
+  npm run dev
 ```
+    
+## Features
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- FaceTec User Registration: Users can register using FaceTec's facial recognition service.
+- Facial Recognition Authentication: After registering, users can authenticate using facial recognition.
+
+## How to contribute
+
+If you would like to contribute to this project, please follow the steps below:
+
+1. Fork the project.
+2. Create a new branch with your feature: `git checkout -b my-new-feature`.
+3. Commit your changes: `git commit -m 'I've added a new feature'`.
+4. Push to the branch: `git push origin my-new-feature`.
+5. Submit a Pull Request.
+
+## License
+
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/).

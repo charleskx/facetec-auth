@@ -2,7 +2,7 @@ import { onRegister, onLogIn } from '@/lib/faceTec'
 
 export default function App() {
   // ** Vars
-  const IDUser = 'f9b8d0e0-4ade-4534-ba6b-bd1750d2a579'
+  const IDUser = 'f9b8d0e0-4ade-4534-ba6b-bd1750d2a579' // CUSTOM ID USER
 
   return (
     <div
