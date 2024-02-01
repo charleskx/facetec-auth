@@ -24,7 +24,7 @@ export default function App() {
         onClick={() => onRegister(IDUser)}
         style={{ minWidth: '250px' }}
       >
-        Registre-se
+        SignUp
       </button>
 
       <button
@@ -32,7 +32,7 @@ export default function App() {
         onClick={() => onLogIn(IDUser)}
         style={{ minWidth: '250px' }}
       >
-        Entrar
+        SignIn
       </button>
 
       <p id="status">Loading...</p>
