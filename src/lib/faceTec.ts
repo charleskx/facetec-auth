@@ -11,6 +11,7 @@ import {
   handleErrorGettingServerSessionToken,
   showMainUI,
 } from '@/helpers/faceTecUtilities'
+import { ptBr } from '@/locale/faceTec'
 
 type TResult = string | null
 
@@ -31,6 +32,8 @@ window.onload = function (): void {
     config.DeviceKeyIdentifier,
     config.PublicFaceScanEncryptionKey,
     (successful: boolean) => {
+      FaceTecSDK.configureLocalization(ptBr)
+
       if (successful) {
         enableAllButtons()
       }
